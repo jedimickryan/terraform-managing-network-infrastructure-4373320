@@ -26,7 +26,7 @@ resource "aws_instance" "test" {
 # Build VPC for Development
 
 resource "aws_vpc" "dev-vpc" {
-  cidr_block  = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/16"
 
   tags = {
     Name = var.vpc_name
@@ -34,8 +34,8 @@ resource "aws_vpc" "dev-vpc" {
 }
 
 resource "aws_subnet" "dev-subnet-01" {
-  vpc_id      = aws_vpc.dev-vpc
-  cidr_block  = "10.0.1.0/24"
+  vpc_id     = aws_vpc.dev-vpc
+  cidr_block = "10.0.1.0/24"
 
   tags = {
     Name = "DEV Subnet 01"
@@ -43,8 +43,8 @@ resource "aws_subnet" "dev-subnet-01" {
 }
 
 resource "aws_subnet" "dev-subnet-02" {
-  vpc_id      = aws_vpc.dev-vpc
-  cidr_block  = "10.0.1.0/24"
+  vpc_id     = aws_vpc.dev-vpc
+  cidr_block = "10.0.1.0/24"
 
   tags = {
     Name = "DEV Subnet 02"
