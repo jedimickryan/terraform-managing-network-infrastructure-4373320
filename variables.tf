@@ -9,7 +9,7 @@ variable "region" {
 
 variable "vpc_name" {
   description = "Name of AWS VPC"
-  default     = local.vpc_name
+  default     = "Dev-VCP"
 }
 
 variable "vpc_cidr" {
