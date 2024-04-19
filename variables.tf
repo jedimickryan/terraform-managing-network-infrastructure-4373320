@@ -9,12 +9,12 @@ variable "region" {
 
 variable "vpc_name" {
   description = "Name of AWS VPC"
-  default     = "Dev-VCP"
+  default     = "Dev-VPC"
 }
 
 variable "vpc_cidr" {
   description = "CIDR of AWS VPC"
-  type        = string
+  type        = "10.0.0.0/16"
 }
 
 #variable "subnet_name" {
