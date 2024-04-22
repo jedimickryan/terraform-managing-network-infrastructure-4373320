@@ -11,9 +11,9 @@ variable "instances" {
 }
 
 variable "ami_id" {
-  description = "ID of amazone machine image"
+  description = "Ubuntu Server 22.04 LTS"
   type        = string
-  default     = "ami-0f0ba639982a32edb"
+  default     = "ami-08116b9957a259459"
 }
 variable "public_key" {
   description = "Path to public key"
