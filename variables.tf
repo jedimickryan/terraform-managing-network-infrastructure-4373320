@@ -48,7 +48,7 @@ variable "subnets" {
 variable "public_ip" {
   description = "Public IP to whitelist"
   type        = string
-  default     = "144.134.113.145/32"
+  default     = "144.xx.xx.xx/32"  # My source IP Address
   sensitive   = true
 }
 
