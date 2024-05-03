@@ -19,7 +19,7 @@ variable "public_key" {
   description = "Path to public key"
   type        = string
   sensitive   = true
-  default     = "keys/ec2.pub"
+  default     = "key/ec2.pub"
 }
 
 variable "region" {
@@ -43,4 +43,35 @@ variable "subnets" {
   description = "Name of AWS subnets"
   type        = list(string)
   default     = ["sub-public", "sub-private"]
+}
+
+variable "public_ip" {
+  description = "Public IP to whitelist"
+  type        = string
+  default     = "144.134.113.145/32"
+  sensitive   = true
+}
+
+variable "igw" {
+  description = "internet gateway"
+  type        = string
+  default     = "igw-dev"
+}
+
+variable "public_sg" {
+  description = "Public Security Group"
+  type        = string
+  default     = "grp-public-SG"
+}
+
+variable "public_rtb" {
+  description = "Public Route Table"
+  type        = string
+  default     = "rtb-public"
+}
+
+variable "ngw" {
+  description = "Name of AWS NAT gateway"
+  type        = string
+  default     = "ngw-dev"
 }
